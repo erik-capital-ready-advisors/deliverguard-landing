@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1200px; height: 628px; overflow: hidden;
+    background: linear-gradient(135deg, #0d5c63 0%, #0a484e 60%, #073338 100%);
+    display: flex; align-items: center;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: #ffffff; padding: 72px 80px;
+    position: relative;
+  }
+  .glow { position: absolute; width: 520px; height: 520px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(245,166,35,.22) 0%, rgba(245,166,35,0) 70%);
+    right: -120px; top: -120px; }
+  .container { max-width: 1000px; position: relative; z-index: 2; }
+  .badge {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.28);
+    border-radius: 9999px;
+    padding: 10px 22px;
+    font-size: 20px; font-weight: 600; letter-spacing: .01em;
+    margin-bottom: 28px;
+  }
+  h1 {
+    font-size: 66px; font-weight: 800; line-height: 1.08;
+    letter-spacing: -0.02em; margin-bottom: 26px;
+  }
+  p {
+    font-size: 27px; line-height: 1.45; color: rgba(255,255,255,0.86);
+    max-width: 880px; margin-bottom: 34px;
+  }
+  .pills { display: flex; gap: 14px; flex-wrap: wrap; }
+  .pill {
+    background: #f5a623; color: #1a1303; font-weight: 800; font-size: 22px;
+    padding: 12px 22px; border-radius: 12px;
+  }
+  .pill.alt { background: rgba(255,255,255,0.14); color: #fff; border: 1.5px solid rgba(255,255,255,0.4); font-weight: 700; }
+</style>
+</head>
+<body>
+  <div class="glow"></div>
+  <div class="container">
+    <div class="badge">🔒 DeliverGuard · for freelancers</div>
+    <h1>Stop Delivering Work to<br>Clients Who Won't Pay</h1>
+    <p>Lock your final files behind a payment link. Your client previews everything — the download unlocks the instant Stripe confirms the money's in.</p>
+    <div class="pills">
+      <div class="pill">Lock my first delivery — $9</div>
+      <div class="pill alt">Founding Pro — $19/mo</div>
+    </div>
+  </div>
+</body>
+</html>
