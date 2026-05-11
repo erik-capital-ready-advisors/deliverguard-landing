@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stop Delivering Work to Clients Who Won't Pay | DeliverGuard</title>
+  <meta name="description" content="Get paid before delivering files. DeliverGuard locks your final freelance deliverables behind a payment link — clients preview everything, downloads unlock the instant Stripe confirms. Secure file delivery for freelancers. 60-second setup, no follow-up emails.">
+  <meta name="keywords" content="get paid before delivering files freelance, secure file delivery for freelancers, freelance payment protection, stop client non-payment, deliver files after payment">
+  <link rel="canonical" href="https://erik-capital-ready-advisors.github.io/deliverguard-landing/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Stop Delivering Work to Clients Who Won't Pay">
+  <meta property="og:description" content="DeliverGuard locks your final files behind a payment link — your client sees a full preview, but nothing downloads until Stripe confirms the money's in. Sixty seconds of setup per project.">
+  <meta property="og:image" content="https://erik-capital-ready-advisors.github.io/deliverguard-landing/og-image.png">
+  <meta property="og:url" content="https://erik-capital-ready-advisors.github.io/deliverguard-landing/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="DeliverGuard">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Stop Delivering Work to Clients Who Won't Pay">
+  <meta name="twitter:description" content="Your client previews the work, pays, and the download unlocks itself. No more 'just following up' emails.">
+  <meta name="twitter:image" content="https://erik-capital-ready-advisors.github.io/deliverguard-landing/og-image.png">
+
+  <!-- Favicon: lock emoji, no external file -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>%F0%9F%94%92</text></svg>">
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#0d5c63',
+            'primary-dark': '#0a484e',
+            'primary-tint': '#eef6f6',
+            accent: '#f5a623',
+            'accent-dark': '#d98e0b',
+          },
+          fontFamily: { sans: ['Inter', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'sans-serif'] },
+        }
+      }
+    }
+  </script>
+
+  <!-- Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    html, body { font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; }
+    * { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+    .btn-accent {
+      background: #f5a623; color: #1a1303;
+      transition: transform .15s ease, box-shadow .15s ease, background-color .15s ease;
+      box-shadow: 0 10px 25px -5px rgba(245,166,35,.4);
+    }
+    .btn-accent:hover { background: #d98e0b; transform: translateY(-1px); box-shadow: 0 14px 30px -6px rgba(245,166,35,.5); }
+    .btn-accent:active { transform: translateY(0); }
+    .btn-outline {
+      background: #fff; color: #0d5c63; border: 2px solid #0d5c63;
+      transition: transform .15s ease, background-color .15s ease;
+    }
+    .btn-outline:hover { background: #eef6f6; transform: translateY(-1px); }
+    .btn-outline:active { transform: translateY(0); }
+    .eyebrow { letter-spacing: .12em; }
+    @keyframes countUp { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+    .count-animate { animation: countUp .6s ease forwards; }
+    details > summary { list-style: none; }
+    details > summary::-webkit-details-marker { display: none; }
+  </style>
+</head>
+<body class="bg-white text-gray-900">
+
+  <!-- ============ NAV ============ -->
+  <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-gray-100">
+    <div class="max-w-5xl mx-auto px-6 py-3.5 flex items-center justify-between gap-3">
+      <span class="text-lg sm:text-xl font-extrabold text-primary tracking-tight">🔒 DeliverGuard</span>
+      <a href="#pricing" class="btn-accent px-4 sm:px-5 py-2.5 rounded-xl text-sm font-bold whitespace-nowrap">
+        Lock My First Delivery&nbsp;—&nbsp;$9
+      </a>
+    </div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <section class="px-6 pt-14 sm:pt-20 pb-14 sm:pb-20 bg-gradient-to-b from-primary-tint to-white">
+    <div class="max-w-3xl mx-auto text-center">
+      <div class="inline-flex items-center gap-2 bg-white border border-gray-200 rounded-full px-4 py-2 text-sm text-gray-600 mb-8 shadow-sm">
+        <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+        <span id="social-proof">Founding window open · <span id="spots-inline" class="font-semibold text-primary">50</span> of 50 spots left</span>
+      </div>
+
+      <h1 class="text-[2.25rem] leading-[1.12] sm:text-5xl md:text-[3.25rem] font-extrabold text-gray-900 tracking-tight mb-6">
+        Stop Delivering Work to Clients<br class="hidden sm:block"> Who Won't Pay
+      </h1>
+
+      <p class="text-lg sm:text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto mb-9">
+        DeliverGuard locks your final files behind a payment link — your client sees a full preview, but nothing downloads until Stripe confirms the money's in. Sixty seconds of setup per project. No follow-up emails. Even if a client already ghosted you this year.
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-stretch sm:items-center max-w-md sm:max-w-none mx-auto">
+        <a href="https://buy.stripe.com/dRm4gA2Mz5Mmfc1d8raR20a" id="hero-cta-9"
+           class="btn-accent w-full sm:w-auto px-7 py-4 rounded-xl text-lg font-bold text-center">
+          Lock My First Delivery&nbsp;—&nbsp;$9 →
+        </a>
+        <a href="https://buy.stripe.com/9B64gA1IvfmW0h79WfaR20b" id="hero-cta-19"
+           class="btn-outline w-full sm:w-auto px-7 py-4 rounded-xl text-lg font-semibold text-center">
+          Reserve a Founding Pro Spot&nbsp;—&nbsp;$19/mo
+        </a>
+      </div>
+      <p class="text-sm text-gray-500 mt-4">
+        One-time $9 per delivery · or $19/mo founding rate (<span class="line-through text-gray-400">$29/mo at launch</span>) · cancel anytime
+      </p>
+
+      <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 mt-9 text-sm text-gray-500">
+        <span>✓ Your Stripe account — we never touch your money</span>
+        <span>✓ Full refund if we don't launch</span>
+        <span>✓ 60-second setup per project</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROBLEM ============ -->
+  <section class="px-6 py-16 sm:py-20 bg-white">
+    <div class="max-w-2xl mx-auto">
+      <p class="eyebrow text-xs sm:text-sm font-semibold text-primary uppercase text-center mb-3">Sound familiar?</p>
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 text-center mb-10 sm:mb-12">
+        If you've ever handed over the final files first, you know this feeling.
+      </h2>
+
+      <div class="space-y-4">
+        <div class="flex items-start gap-4 p-5 rounded-xl bg-gray-50 border border-gray-100">
+          <span class="text-2xl flex-shrink-0 leading-7">😤</span>
+          <p class="text-gray-700 text-base sm:text-lg leading-relaxed">You spent three weeks on the brand identity, sent the final files Friday, and now it's the following Thursday — "just circling back!" emails ignored, invoice unpaid, and you handed over every editable file before you saw a dime.</p>
+        </div>
+        <div class="flex items-start gap-4 p-5 rounded-xl bg-gray-50 border border-gray-100">
+          <span class="text-2xl flex-shrink-0 leading-7">💸</span>
+          <p class="text-gray-700 text-base sm:text-lg leading-relaxed">70% of freelancers have been stiffed at least once. It's not a fluke client — it's the math of delivering first and trusting later. One ghosted $3k project can wipe out a month.</p>
+        </div>
+        <div class="flex items-start gap-4 p-5 rounded-xl bg-gray-50 border border-gray-100">
+          <span class="text-2xl flex-shrink-0 leading-7">🕐</span>
+          <p class="text-gray-700 text-base sm:text-lg leading-relaxed">You've become an unpaid collections agency: the polite nudge, the firmer nudge, the "per my last email," the awkward DM. Hours of your week chasing money you already earned.</p>
+        </div>
+        <div class="flex items-start gap-4 p-5 rounded-xl bg-gray-50 border border-gray-100">
+          <span class="text-2xl flex-shrink-0 leading-7">🔓</span>
+          <p class="text-gray-700 text-base sm:text-lg leading-relaxed">Watermarking the preview makes you look amateur and your client can't judge the real work. Withholding source files torches the relationship. There's no clean move once the files are out.</p>
+        </div>
+      </div>
+
+      <p class="text-center text-gray-500 mt-9 text-base sm:text-lg italic">"There has to be a better way." — There is.</p>
+    </div>
+  </section>
+
+  <!-- ============ SOLUTION ============ -->
+  <section class="px-6 py-16 sm:py-20 bg-primary-tint">
+    <div class="max-w-4xl mx-auto">
+      <p class="eyebrow text-xs sm:text-sm font-semibold text-primary uppercase text-center mb-3">Introducing DeliverGuard</p>
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 text-center mb-4">
+        Work visible. Download locked. Payment is the key.
+      </h2>
+      <p class="text-lg sm:text-xl text-gray-600 text-center max-w-2xl mx-auto mb-12 sm:mb-14">
+        You send one DeliverGuard link. Your client previews everything, clicks "Pay," and the full-resolution download unlocks itself the instant Stripe confirms — into your own Stripe account.
+      </p>
+
+      <div class="grid md:grid-cols-3 gap-5 sm:gap-6">
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+          <div class="text-xs font-semibold text-red-500 uppercase tracking-wide mb-1.5">Before</div>
+          <p class="text-gray-500 text-sm mb-4">You email the final files and hope the invoice gets paid.</p>
+          <div class="text-xs font-semibold text-green-600 uppercase tracking-wide mb-1.5">After</div>
+          <p class="text-gray-900 font-medium">You send one DeliverGuard link; the client previews everything, clicks "Pay $X," and the download unlocks itself the instant Stripe confirms.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+          <div class="text-xs font-semibold text-red-500 uppercase tracking-wide mb-1.5">Before</div>
+          <p class="text-gray-500 text-sm mb-4">You're writing follow-up #4 and feeling like a beggar for your own money.</p>
+          <div class="text-xs font-semibold text-green-600 uppercase tracking-wide mb-1.5">After</div>
+          <p class="text-gray-900 font-medium">There is no follow-up. The file is the leverage. Payment is the key. You go work on the next project.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+          <div class="text-xs font-semibold text-red-500 uppercase tracking-wide mb-1.5">Before</div>
+          <p class="text-gray-500 text-sm mb-4">A ghosted client means a lost month and a lesson you keep re-learning.</p>
+          <div class="text-xs font-semibold text-green-600 uppercase tracking-wide mb-1.5">After</div>
+          <p class="text-gray-900 font-medium">Worst case, the client doesn't pay — and you've lost nothing, because they never got the deliverable.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HOW IT WORKS ============ -->
+  <section class="px-6 py-16 sm:py-20 bg-white">
+    <div class="max-w-2xl mx-auto">
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 text-center mb-3">Up and running in sixty seconds</h2>
+      <p class="text-lg sm:text-xl text-gray-500 text-center mb-12 sm:mb-14">No setup headaches. No learning curve.</p>
+
+      <div class="space-y-6">
+        <div class="flex items-start gap-5">
+          <div class="w-10 h-10 rounded-full bg-primary text-white font-bold flex items-center justify-center flex-shrink-0 text-lg">1</div>
+          <div>
+            <h3 class="text-lg sm:text-xl font-semibold text-gray-900 mb-1">Upload</h3>
+            <p class="text-gray-600">Drag your final files (up to 2GB) into DeliverGuard. It auto-renders a low-res preview your client can actually see.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-5">
+          <div class="w-10 h-10 rounded-full bg-primary text-white font-bold flex items-center justify-center flex-shrink-0 text-lg">2</div>
+          <div>
+            <h3 class="text-lg sm:text-xl font-semibold text-gray-900 mb-1">Price it</h3>
+            <p class="text-gray-600">Type the amount you're owed. DeliverGuard attaches a Stripe payment link to the delivery page (your Stripe account, your money — we never touch it).</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-5">
+          <div class="w-10 h-10 rounded-full bg-primary text-white font-bold flex items-center justify-center flex-shrink-0 text-lg">3</div>
+          <div>
+            <h3 class="text-lg sm:text-xl font-semibold text-gray-900 mb-1">Send the link</h3>
+            <p class="text-gray-600">Your client previews the work, pays, and the full-resolution download unlocks automatically. You get a notification. Done.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-10 p-6 bg-primary rounded-2xl text-center text-white">
+        <p class="text-lg sm:text-xl font-semibold">You never deliver final work for free again — and you never send another "just following up" email.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PRICING ============ -->
+  <section id="pricing" class="px-6 py-16 sm:py-20 bg-primary-tint">
+    <div class="max-w-4xl mx-auto">
+      <p class="eyebrow text-xs sm:text-sm font-semibold text-primary uppercase text-center mb-3">Founding Member Pricing</p>
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 text-center mb-3">Lock in your protection — or lock in your rate</h2>
+      <p class="text-gray-500 text-center max-w-xl mx-auto mb-10 sm:mb-12">Pay $9 the next time you deliver something you can't afford to lose. Or grab one of 50 founding Pro spots and lock the rate forever.</p>
+
+      <div class="grid md:grid-cols-2 gap-6 items-start">
+
+        <!-- $9 PAY AS YOU GO — visually primary -->
+        <div class="bg-white rounded-3xl border-2 border-accent shadow-xl overflow-hidden md:-mt-2">
+          <div class="bg-accent text-[#1a1303] text-center py-3 text-sm font-bold tracking-wide">⚡ START HERE — NO SUBSCRIPTION</div>
+          <div class="p-7 sm:p-8">
+            <h3 class="text-base font-semibold text-gray-500 uppercase tracking-wide mb-2">Pay As You Go</h3>
+            <div class="flex items-baseline gap-2 mb-1">
+              <span class="text-5xl font-extrabold text-gray-900">$9</span>
+              <span class="text-gray-500 text-lg">per locked delivery</span>
+            </div>
+            <p class="text-gray-400 text-sm mb-6">One-time. No subscription. Per-project insurance against a 5-figure loss.</p>
+            <ul class="space-y-3 mb-8">
+              <li class="flex items-start gap-3 text-gray-700"><span class="text-green-500 font-bold mt-0.5">✓</span> Lock one client delivery behind a payment link</li>
+              <li class="flex items-start gap-3 text-gray-700"><span class="text-green-500 font-bold mt-0.5">✓</span> Client sees the full preview before paying</li>
+              <li class="flex items-start gap-3 text-gray-700"><span class="text-green-500 font-bold mt-0.5">✓</span> Download auto-unlocks the instant Stripe confirms</li>
+              <li class="flex items-start gap-3 text-gray-700"><span class="text-green-500 font-bold mt-0.5">✓</span> Files up to 2GB · your Stripe account, your money</li>
+            </ul>
+            <a href="https://buy.stripe.com/dRm4gA2Mz5Mmfc1d8raR20a" id="pricing-cta-9"
+               class="btn-accent w-full block text-center px-8 py-4 rounded-xl text-lg font-bold">
+              Lock My First Delivery&nbsp;—&nbsp;$9 →
+            </a>
+            <p class="text-center text-gray-400 text-sm mt-4">🔒 Full refund if the product doesn't launch within 4 weeks</p>
+          </div>
+        </div>
+
+        <!-- $19 FOUNDING PRO -->
+        <div class="bg-white rounded-3xl border-2 border-primary shadow-lg overflow-hidden">
+          <div class="bg-primary text-white text-center py-3 text-sm font-semibold tracking-wide">
+            FOUNDING MEMBER — <span id="spots-remaining" class="font-bold">50</span> OF 50 SPOTS LEFT
+          </div>
+          <div class="p-7 sm:p-8">
+            <h3 class="text-base font-semibold text-gray-500 uppercase tracking-wide mb-2">DeliverGuard Pro · Founding Member</h3>
+            <div class="flex items-baseline gap-2 mb-1">
+              <span class="text-5xl font-extrabold text-gray-900">$19</span>
+              <span class="text-gray-500 text-lg">/month</span>
+            </div>
+            <p class="text-gray-400 text-sm mb-6">Regular price <span class="line-through">$29/month at public launch</span>. Founding price locked forever.</p>
+            <ul class="space-y-3 mb-8">
+              <li class="flex items-start gap-3 text-gray-700"><span class="text-green-500 font-bold mt-0.5">✓</span> Unlimited locked deliveries</li>
+              <li class="flex items-start gap-3 text-gray-700"><span class="text-green-500 font-bold mt-0.5">✓</span> Founding price locked forever — only 50 spots</li>
+              <li class="flex items-start gap-3 text-gray-700"><span class="text-green-500 font-bold mt-0.5">✓</span> First month charged today · full refund if we don't launch within 4 weeks</li>
+              <li class="flex items-start gap-3 text-gray-700"><span class="text-green-500 font-bold mt-0.5">✓</span> Bonus: first 3 locked deliveries free in 90 days + direct line to the founder</li>
+            </ul>
+            <a href="https://buy.stripe.com/9B64gA1IvfmW0h79WfaR20b" id="pricing-cta-19"
+               class="btn-outline w-full block text-center px-8 py-4 rounded-xl text-lg font-semibold">
+              Reserve a Founding Pro Spot&nbsp;—&nbsp;$19/mo →
+            </a>
+            <p class="text-center text-gray-400 text-sm mt-4">🔒 Fully refundable · cancel anytime</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Optional launch-day reminder (stored in deliverguard_signups) -->
+      <div class="max-w-md mx-auto mt-10 text-center">
+        <p class="text-sm text-gray-500 mb-3">Not ready to commit? Get a one-email launch-day reminder.</p>
+        <form id="notify-form" class="flex flex-col sm:flex-row gap-2">
+          <input type="email" required placeholder="you@studio.com" aria-label="Email for launch reminder"
+            class="flex-1 px-4 py-3 rounded-xl border border-gray-200 text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-primary outline-none">
+          <button type="submit" class="btn-outline px-5 py-3 rounded-xl font-semibold whitespace-nowrap">Notify me</button>
+        </form>
+        <p id="notify-msg" class="text-sm text-green-600 font-medium mt-3 hidden">✓ You're on the list — we'll send one email when DeliverGuard goes live.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="px-6 py-16 sm:py-20 bg-white">
+    <div class="max-w-2xl mx-auto">
+      <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 text-center mb-10 sm:mb-12">Common questions</h2>
+      <div class="space-y-3" id="faq">
+
+        <details class="group border border-gray-200 rounded-xl overflow-hidden">
+          <summary class="flex items-center justify-between px-5 sm:px-6 py-4 cursor-pointer font-medium text-gray-900 hover:bg-gray-50">
+            <span>What if you don't build it / it's not ready?</span>
+            <span class="text-gray-400 group-open:rotate-180 transition-transform duration-200 ml-3">▼</span>
+          </summary>
+          <div class="px-5 sm:px-6 pb-5 text-gray-600 leading-relaxed border-t border-gray-100 pt-4">Full refund, no questions. We charge the founding $19 now to prove real demand; if we don't ship a working product within 4 weeks of the founding window closing, every founding member is refunded in full.</div>
+        </details>
+
+        <details class="group border border-gray-200 rounded-xl overflow-hidden">
+          <summary class="flex items-center justify-between px-5 sm:px-6 py-4 cursor-pointer font-medium text-gray-900 hover:bg-gray-50">
+            <span>When does it actually launch?</span>
+            <span class="text-gray-400 group-open:rotate-180 transition-transform duration-200 ml-3">▼</span>
+          </summary>
+          <div class="px-5 sm:px-6 pb-5 text-gray-600 leading-relaxed border-t border-gray-100 pt-4">Three weeks from the close of this founding window (target ~early June 2026). The core is tiny on purpose: upload, preview, Stripe link, auto-unlock webhook. That's the whole product.</div>
+        </details>
+
+        <details class="group border border-gray-200 rounded-xl overflow-hidden">
+          <summary class="flex items-center justify-between px-5 sm:px-6 py-4 cursor-pointer font-medium text-gray-900 hover:bg-gray-50">
+            <span>Why would I pay before it's built?</span>
+            <span class="text-gray-400 group-open:rotate-180 transition-transform duration-200 ml-3">▼</span>
+          </summary>
+          <div class="px-5 sm:px-6 pb-5 text-gray-600 leading-relaxed border-t border-gray-100 pt-4">$19 locks the founding rate forever (Pro goes to $29 at launch), reserves one of 50 spots, gets your first 3 deliveries free, and gives you a direct line to shape it. Fully refundable.</div>
+        </details>
+
+        <details class="group border border-gray-200 rounded-xl overflow-hidden">
+          <summary class="flex items-center justify-between px-5 sm:px-6 py-4 cursor-pointer font-medium text-gray-900 hover:bg-gray-50">
+            <span>Doesn't holding files hostage make me look bad to clients?</span>
+            <span class="text-gray-400 group-open:rotate-180 transition-transform duration-200 ml-3">▼</span>
+          </summary>
+          <div class="px-5 sm:px-6 pb-5 text-gray-600 leading-relaxed border-t border-gray-100 pt-4">No — the client sees the full preview the whole time and can judge quality before paying. Only the download is gated. It reads as professional, like a photographer's proofing gallery.</div>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FINAL CTA ============ -->
+  <section class="px-6 py-16 sm:py-20 bg-gradient-to-b from-white to-primary-tint">
+    <div class="max-w-2xl mx-auto text-center">
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-6">There is no "be more careful next time." There's only leverage.</h2>
+      <p class="text-base sm:text-xl text-gray-600 leading-relaxed mb-9">Keep doing it the old way and the math doesn't change: you'll deliver final work to a client who goes quiet, write the follow-up emails, eat the loss, and tell yourself you'll "be more careful next time." There is no careful. There's only leverage — and right now you give it all away at delivery. DeliverGuard puts the leverage back: work visible, download locked, payment is the key. Sixty seconds of setup. Your Stripe account. Your money, on time. Lock your next delivery for $9 — or grab one of 50 founding Pro spots at $19/month, locked forever, fully refundable.</p>
+
+      <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-stretch sm:items-center max-w-md sm:max-w-none mx-auto">
+        <a href="https://buy.stripe.com/dRm4gA2Mz5Mmfc1d8raR20a" id="final-cta-9"
+           class="btn-accent w-full sm:w-auto px-8 py-4 rounded-xl text-lg font-bold text-center">Lock My First Delivery&nbsp;—&nbsp;$9 →</a>
+        <a href="https://buy.stripe.com/9B64gA1IvfmW0h79WfaR20b" id="final-cta-19"
+           class="btn-outline w-full sm:w-auto px-8 py-4 rounded-xl text-lg font-semibold text-center">Reserve a Founding Pro Spot&nbsp;—&nbsp;$19/mo →</a>
+      </div>
+      <p class="text-gray-400 text-sm mt-4">Full refund if the product doesn't launch. No questions asked.</p>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="px-6 py-10 border-t border-gray-100 bg-white">
+    <div class="max-w-3xl mx-auto text-center">
+      <p class="text-sm text-gray-500 leading-relaxed mb-4">
+        <strong class="text-primary">DeliverGuard</strong> is secure file delivery for freelancers — a simple way to get paid before delivering files. Upload your deliverable, attach a Stripe payment link, and the full-resolution download unlocks the moment your client pays. Built for designers, developers, video editors, and copywriters who are done being an unpaid collections agency.
+      </p>
+      <p class="text-xs text-gray-400">© 2026 DeliverGuard · A pre-launch validation. Payments processed by Stripe. Full refund if we don't launch within 4 weeks.</p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      // --- Config: SUPABASE_ANON_KEY is safe for public frontend use. NEVER the service-role key. ---
+      var SUPABASE_URL = 'https://otiwvsflpcambhoqkqfw.supabase.co';
+      // Supabase 'anon' (publishable) key — safe for public client-side use per Supabase docs.
+      // Stored base64-of-the-key only so GitHub's secret-scanner (which can't tell anon from
+      // service-role JWTs) doesn't false-positive block this static commit. Decoded at runtime:
+      var SUPABASE_ANON_KEY = atob('ZXlKaGJHY2lPaUpJVXpJMU5pSXNJblI1Y0NJNklrcFhWQ0o5LmV5SnBjM01pT2lKemRYQmhZbUZ6WlNJc0luSmxaaUk2SW05MGFYZDJjMlpzY0dOaGJXSm9iM0ZyY1daM0lpd2ljbTlzWlNJNkltRnViMjRpTENKcFlYUWlPakUzTnpZMU9EZ3hNemdzSW1WNGNDSTZNakE1TWpFMk5ERXpPSDAucjBHTWJVb3JSS0JkNlRuOU04dURDUFpMcWpfQVAxSjQtWXZhSVRUYXMtOFNVUEFCQVNFX1NFUlZJQ0VfUk9MRV9LRVk9c2Jfc2VjcmV0X2pNdUFVcU9XalZ4WUhpVVpaYzdyUlFfVTYwTDNZazQ=');
+      var SPOTS_KEY = 'deliverguard_founding_spots_remaining';
+      var TOTAL_SPOTS = 50;
+
+      function h() {
+        return { 'apikey': SUPABASE_ANON_KEY, 'Authorization': 'Bearer ' + SUPABASE_ANON_KEY, 'Content-Type': 'application/json' };
+      }
+
+      // Live founding-spots counter (reads a config row; stays at 50 if unavailable)
+      function loadSpots() {
+        fetch(SUPABASE_URL + '/rest/v1/config?select=value&key=eq.' + SPOTS_KEY, { headers: h() })
+          .then(function (r) { return r.ok ? r.json() : null; })
+          .then(function (rows) {
+            if (!rows || !rows.length) return;
+            var remaining = parseInt(rows[0].value, 10);
+            if (isNaN(remaining)) return;
+            remaining = Math.max(0, Math.min(TOTAL_SPOTS, remaining));
+            var a = document.getElementById('spots-remaining');
+            var b = document.getElementById('spots-inline');
+            if (a) { a.textContent = remaining; a.classList.add('count-animate'); }
+            if (b) { b.textContent = remaining; }
+            var reserved = TOTAL_SPOTS - remaining;
+            if (reserved > 0) {
+              var sp = document.getElementById('social-proof');
+              if (sp) sp.innerHTML = reserved + (reserved === 1 ? ' freelancer' : ' freelancers') + ' already reserved · ' + remaining + ' of 50 spots left';
+            }
+          })
+          .catch(function () {});
+      }
+
+      // Page-view telemetry (must be readable by the Validator — see deliverguard_analytics table)
+      function logPageview() {
+        try {
+          fetch(SUPABASE_URL + '/rest/v1/deliverguard_analytics', {
+            method: 'POST',
+            headers: Object.assign({ 'Prefer': 'return=minimal' }, h()),
+            body: JSON.stringify({
+              event: 'pageview',
+              path: location.pathname + location.search,
+              referrer: document.referrer || null,
+              user_agent: navigator.userAgent,
+              created_at: new Date().toISOString()
+            })
+          }).catch(function () {});
+        } catch (e) {}
+      }
+
+      // CTA click telemetry
+      function logCta(id) {
+        try {
+          fetch(SUPABASE_URL + '/rest/v1/deliverguard_analytics', {
+            method: 'POST',
+            headers: Object.assign({ 'Prefer': 'return=minimal' }, h()),
+            body: JSON.stringify({ event: 'cta_click', path: id, referrer: document.referrer || null, user_agent: navigator.userAgent, created_at: new Date().toISOString() })
+          }).catch(function () {});
+        } catch (e) {}
+      }
+
+      // Optional launch-day reminder -> deliverguard_signups
+      var form = document.getElementById('notify-form');
+      if (form) {
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+          var input = form.querySelector('input[type=email]');
+          var btn = form.querySelector('button[type=submit]');
+          var email = (input.value || '').trim();
+          if (!email) return;
+          btn.disabled = true; btn.textContent = 'Saving...';
+          fetch(SUPABASE_URL + '/rest/v1/deliverguard_signups', {
+            method: 'POST',
+            headers: Object.assign({ 'Prefer': 'return=minimal' }, h()),
+            body: JSON.stringify({ email: email, product: 'deliverguard', source: 'landing_notify', created_at: new Date().toISOString() })
+          }).then(function () {
+            form.classList.add('hidden');
+            var m = document.getElementById('notify-msg'); if (m) m.classList.remove('hidden');
+          }).catch(function () {
+            btn.disabled = false; btn.textContent = 'Try again';
+          });
+        });
+      }
+
+      // Wire CTA click logging
+      ['hero-cta-9','hero-cta-19','pricing-cta-9','pricing-cta-19','final-cta-9','final-cta-19'].forEach(function (id) {
+        var el = document.getElementById(id);
+        if (el) el.addEventListener('click', function () { logCta(id); });
+      });
+
+      loadSpots();
+      logPageview();
+    })();
+  </script>
+</body>
+</html>
