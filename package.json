@@ -1,0 +1,9 @@
+{
+  "name": "deliverguard-landing",
+  "version": "1.0.0",
+  "private": true,
+  "description": "DeliverGuard pre-sell validation landing page — static, self-contained.",
+  "scripts": {
+    "deploy": "vercel --prod --yes"
+  }
+}
